@@ -9,4 +9,10 @@ driver_table = result['MRData']['DriverTable']
 season = driver_table['season']
 drivers = driver_table['Drivers']
 
-print(drivers)
+filtereddrivers = drivers[0:3]
+
+for driver in filtereddrivers:
+   print(driver['familyName'],driver['givenName'],driver['permanentNumber'])
+
+     
+
