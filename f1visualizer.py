@@ -47,17 +47,17 @@ while has_data:
       break
 
     driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']
-    #Nem tudom mit kéne definiálni amin végigmenjen, mert elég volna csak a számokon.
-    #Mégis tudom, de lehet hogy rosszul csinálom
-    #for first in round:
-    #   print(round,"round's winner:",driver_standings[round]['Driver']['familyName'])
-    num = 0
-    top = num[0:3]
-    for num in top:
-       print(round,"round's winner:",driver_standings[num]['Driver']['familyName'])
-      
-    round = round + 1
 
+    points = 0
+    for standing in driver_standings:
+      if standing['Driver']['code'] == "VER":
+         print(standing['points']-points)
+         points = standing['points']
+         #print(standing['position'],standing['Driver']['familyName'])
+      
+   
+    round = round + 1
+#Verstappennek a szezon során az egyes meccseken hány pontya volt
 
 
 

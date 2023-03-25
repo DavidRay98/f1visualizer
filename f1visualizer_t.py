@@ -17,12 +17,12 @@ while has_data:
 
     driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']
 
-    # for i in range(0, 3):
-    #    driver_standing = driver_standings[i]
-    #    print(driver_standing)
+    for i in range(0, 3):
+        standing = driver_standings[i]
+        print(standing['position'])
     
-    for standing in driver_standings:
-       print(standing)
+    for standing in driver_standings[0:3]:
+       print(standing['position'])
 
     round = round + 1
 
