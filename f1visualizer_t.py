@@ -15,8 +15,15 @@ while has_data:
     if not has_data:
       break
 
-    driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']    
+    driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']
+
+    # for i in range(0, 3):
+    #    driver_standing = driver_standings[i]
+    #    print(driver_standing)
     
+    for standing in driver_standings:
+       print(standing)
+
     round = round + 1
 
 #print(results[0]['position'],'.',results[0]['Driver']['givenName'],results[0]['Driver']['familyName'],results[0]['points'],"points")
