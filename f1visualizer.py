@@ -33,33 +33,36 @@ import json
 #print(results[2]['position'],'.',results[2]['Driver']['givenName'],results[2]['Driver']['familyName'],results[2]['points'],"points")
 
 
-has_data = True
-round = 1
+#has_data = True
+#round = 1
 
-while has_data:
-    url = f'https://ergast.com/api/f1/2023/{round}/driverStandings.json'
-    result = json.load(urllib.request.urlopen(url))
-    data = result['MRData']
+#while has_data:
+    #url = f'https://ergast.com/api/f1/2023/{round}/driverStandings.json'
+    #result = json.load(urllib.request.urlopen(url))
+    #data = result['MRData']
 
-    has_data = int(data['total']) > 0
+    #has_data = int(data['total']) > 0
 
-    if not has_data:
-      break
+    #if not has_data:
+      #break
 
-    driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']
+    #driver_standings = data['StandingsTable']['StandingsLists'][0]['DriverStandings']
 
-    points = 0
-    for standing in driver_standings:
-      if standing['Driver']['code'] == "VER":
-         print(standing['points']-points)
-         points = standing['points']
+    
+    #for standing in driver_standings:
+      #if standing['Driver']['code'] == "VER":
+         #print(int(standing['points']))
+       
          #print(standing['position'],standing['Driver']['familyName'])
       
    
-    round = round + 1
+    #round = round + 1
 #Verstappennek a szezon során az egyes meccseken hány pontya volt
 
 
+#neved = input('Mi a neved?\n')
+#print('menj a picsába ',neved)
 
-
-
+telefonkonyv = {}
+telefonkonyv=input('kikre vagy kíváncsi?\n Vesszővel írd be a neveket\n').split(',')
+print(telefonkonyv)
