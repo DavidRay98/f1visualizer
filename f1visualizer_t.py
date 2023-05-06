@@ -23,7 +23,6 @@ drivers = drivers_input.split(",")
 has_data = True
 round = 1
 
-standings_dict_initialized = False
 standings_dict = { }
 
 for driver in drivers:
