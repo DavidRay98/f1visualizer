@@ -12,7 +12,7 @@ if not year_input.isnumeric():
 
 year = int(year_input)
 
-if year not in range(1970,2024):
+if year not in range(1950,2024):
   print("Ebben az évben nem rendeztek F1-et!")
   exit(1)
 
