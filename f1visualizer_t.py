@@ -55,9 +55,11 @@ activity = [*range(1, round, 1)]
 
 figure, axes = plot.subplots()
 
-for key in standings_dict:
-  if len(standings_dict[key]) == len(activity):
-    axes.plot(activity, standings_dict[key], label=key)
+for driver in standings_dict:
+  if len(standings_dict[driver]) == len(activity):
+    axes.plot(activity, standings_dict[driver], label=driver)
+  else:
+    print("Az adott versenyzőről (", driver, ") nem áll rendelkezésre adat minden futamról.")
 
 
 axes.legend()
